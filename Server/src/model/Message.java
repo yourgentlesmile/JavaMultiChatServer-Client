@@ -1,14 +1,14 @@
-package Model;
+package model;
 
 import java.io.Serializable;
 
-public class message implements Serializable{
+public class Message implements Serializable{
 	int msgtype;//0£ºchatmessage  1£ºfile  2:heartpackage  3:register  4:login
 	Object msg;
 	String username;
 	String password;
 	
-	public message(int msgtype, Object msg, String username, String password) {
+	public Message(int msgtype, Object msg, String username, String password) {
 		super();
 		this.msgtype = msgtype;
 		this.msg = msg;

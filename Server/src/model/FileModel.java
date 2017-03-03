@@ -1,20 +1,20 @@
-package Model;
+package model;
 
 import java.io.Serializable;
 
 public class FileModel implements Serializable{
-	String filename;
+	String fileName;
 	byte[] data;
 	
 	public FileModel(String filename, byte[] data) {
-		this.filename = filename;
+		this.fileName = filename;
 		this.data = data;
 	}
 	public String getFilename() {
-		return filename;
+		return fileName;
 	}
 	public void setFilename(String filename) {
-		this.filename = filename;
+		this.fileName = filename;
 	}
 	public byte[] getData() {
 		return data;

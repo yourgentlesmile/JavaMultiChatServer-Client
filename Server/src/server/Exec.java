@@ -1,15 +1,15 @@
-package Server;
+package server;
 
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-public class exec {  
+public class Exec {  
 	public static int port=8369;
 	public static String version="v1.0.0";
-	public static boolean ServerStatus=false;
+	public static boolean serverStatus=false;
     public static void main(String[] args) { 
-    	ServerAction();
+    	serverAction();
     }
     public static void menu(){
     	String title="----------welcome use Simple multiplayer chat server----------\n";
@@ -20,7 +20,7 @@ public class exec {
     	String menuitem5="           /e           exit\n";
     	System.out.println(title+menuitem1+menuitem2+menuitem3+menuitem4+menuitem5);
     }
-    public static void ServerAction() {
+    public static void serverAction() {
 		menu();
 		boolean isrunning=true;
 		Scanner scanner=new Scanner(System.in);
@@ -32,8 +32,8 @@ public class exec {
 				System.out.println("version: "+version);
 				System.out.println("designer: XC");
 				System.out.println("using port: "+port);
-				System.out.println("server status: "+(ServerStatus?"Running":"Stopped"));
-				if(ServerStatus) System.out.println("online user count: "+servers.map.size());
+				System.out.println("server status: "+(serverStatus?"Running":"Stopped"));
+				if(serverStatus) System.out.println("online user count: "+Servers.map.size());
 				else System.out.println("online user count: Server stopped");
 				break;
 			case "o":
@@ -50,8 +50,8 @@ public class exec {
 				break;
 			case "start":
 				System.out.println("server running....");
-				ServerStatus=true;
-				serverrun=new Thread(new servers(port));
+				serverStatus=true;
+				serverrun=new Thread(new Servers(port));
 				serverrun.start();
 				break;
 			case "h":
